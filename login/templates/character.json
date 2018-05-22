@@ -1,0 +1,10 @@
+{"status":"OK",
+  "characters":
+  [{% for character in characters %}
+    {% if not forloop.last %}
+  	{"id":{{character.pk}},"name":"{{character.name}}","class":{{character.class_field}},"gender":{{character.gender}},"level":{{character.level}}},
+  	{% else %}
+  	{"id":{{character.pk}},"name":"{{character.name}}","class":{{character.class_field}},"gender":{{character.gender}},"level":{{character.level}}}
+  	{% endif %}
+  	{% endfor %}]
+  }

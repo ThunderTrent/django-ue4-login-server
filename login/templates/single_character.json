@@ -1,0 +1,33 @@
+{"status":"OK",
+"name":"{{character.name}}",
+"inventory":[
+  {% for item in items %}{% if not forloop.last %}
+  	{"slot":{{item.slot|safe}},"item":"{{item.item|safe}}","amount":{{item.amount}}},
+  	{% else %}
+  	{"slot":{{item.slot}},"item":"{{item.item|safe}}","amount":{{item.amount}}}
+  	{% endif %}
+  	{% endfor %}],
+"quests":[],
+"health":{{character.health}},
+"mana":{{character.mana}},
+"level":{{character.level}},
+"experience":{{character.experience}},
+"clan":"{{character.clan}}",
+"posx":{{character.posx}},
+"posy":{{character.posy}},
+"posz":{{character.posz}},
+"rotation_yaw":{{character.rotation_yaw}},
+"equip_head":"{{character.equip_head}}",
+"equip_chest":"{{character.equip_chest}}",
+"equip_hands":"{{character.equip_hands}}",
+"equip_legs":"{{character.equip_legs}}",
+"equip_feet":"{{character.equip_feet}}",
+"hotbar0":"{{character.hotbar0|safe}}",
+"hotbar1":"{{character.hotbar1|safe}}",
+"hotbar2":"{{character.hotbar2|safe}}",
+"hotbar3":"{{character.hotbar3|safe}}",
+"hotbar4":"{{character.hotbar4|safe}}",
+"hotbar5":"{{character.hotbar5|safe}}",
+"hotbar6":"{{character.hotbar6|safe}}",
+"hotbar7":"{{character.hotbar7|safe}}"
+}
